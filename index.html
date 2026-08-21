@@ -1,247 +1,60 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kangen Atha</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #1e3a8a;
-      color: white;
-      overflow: hidden;
-    }
-    .section {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      transition: opacity 0.8s ease;
-      padding: 20px;
-      text-align: center;
-    }
-    .hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
-    .visible {
-      opacity: 1;
-      pointer-events: all;
-    }
-    .card {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      max-width: 500px;
-      position: relative;
-    }
-    h1 {
-      margin: 20px 0;
-      color: #ffe6e6;
-    }
-    p {
-      font-style: italic;
-      line-height: 1.4;
-      margin: 10px 0;
-      white-space: pre-line;
-    }
-    .nav-buttons {
-      margin-bottom: 20px;
-    }
-    button {
-      margin: 0 10px;
-      padding: 10px 25px;
-      border: none;
-      background-color: #ffffff33;
-      color: white;
-      font-size: 1rem;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background-color: #ffffff66;
-    }
-    .emoji {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-    .rain {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      pointer-events: none;
-    }
-    .raindrop {
-      position: absolute;
-      width: 2px;
-      height: 15px;
-      background: rgba(255,255,255,0.4);
-      animation: drop 0.6s linear infinite;
-    }
-    @keyframes drop {
-      to {
-        transform: translateY(100vh);
-        opacity: 0;
-      }
-    }
-    #puisi-content span {
-      display: inline-block;
-      opacity: 0;
-      transform: translateY(10px);
-      animation: fadeUp 1s forwards;
-      margin-bottom: 6px;
-    }
-    #puisi-content span:nth-child(1) { animation-delay: 0.5s; }
-    #puisi-content span:nth-child(2) { animation-delay: 1s; }
-    #puisi-content span:nth-child(3) { animation-delay: 1.5s; }
-    #puisi-content span:nth-child(4) { animation-delay: 2s; }
-    #puisi-content span:nth-child(5) { animation-delay: 2.5s; }
-    #puisi-content span:nth-child(6) { animation-delay: 3s; }
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
 
-<!-- Halaman 1 -->
-<div id="page1" class="section visible">
-  <div class="rain" id="rain"></div>
-  <div class="card">
-    <div class="nav-buttons">
-      <button onclick="nextPage()">Lanjut</button>
-    </div>
-    <div class="emoji">💔</div>
-    <h1>Kangen Atha</h1>
-    <p>
-      Ada banyak hal yang ingin aku sampaikan haaaaa...<br>
-      Tapi sekarang, hanya rindu yang tersisa di malam sepi ini.<br>
-      Semoga kamu bisa dengar, meski dari jauh...
-    </p>
-  </div>
-</div>
+    <header>
+        <h1>Selamat Datang di Website Saya</h1>
+    </header>
 
-<!-- Halaman 2 -->
-<div id="page2" class="section hidden">
-  <div class="card">
-    <div class="nav-buttons">
-      <button onclick="prevPage1()">⬅️ Kembali</button>
-      <button onclick="nextPage2()">➡️ Lanjut</button>
-    </div>
-    <div class="emoji">🥀</div>
-    <h1>Untukmu</h1>
-    <p id="puisi-content">
-      <span>Kita saling tahu, tapi tak saling bertemu.</span><br>
-      <span>Ada rindu yang tumbuh diam-diam, dalam jarak dan dalam waktu.</span><br>
-      <span>Aku dan kamu seperti senja dan pagi — tak pernah bersisian, tapi saling menanti.</span><br>
-      <span>Sampai akhirnya waktu memisah, bahkan sebelum sempat saling menyapa...</span><br>
-      <span>Kini hanya sepi yang menjawab, dan aku masih bertanya,</span><br>
-      <span>"Kenapa kita tidak pernah sempat?"</span>
-    </p>
-  </div>
-</div>
+    <main>
+        <h2>Tentang Halaman Ini</h2>
+        <p>Ini adalah contoh website sangat sederhana yang hanya menggunakan struktur dasar HTML dan sedikit gaya CSS.</p>
+        
+        <h3>Daftar Aktivitas</h3>
+        <ul>
+            <li>Belajar HTML dasar</li>
+            <li>Membuat struktur halaman web</li>
+            <li>Menjalankan file di browser</li>
+        </ul>
 
-<!-- Halaman 3 -->
-<div id="page3" class="section hidden">
-  <div class="card">
-    <div class="nav-buttons">
-      <button onclick="prevPage2()">⬅️ Kembali</button>
-      <button onclick="nextPage3()">➡️ Lanjut</button>
-    </div>
-    <div class="emoji">📖</div>
-    <h1>Akhir Cerita</h1>
-    <p>
-      Jika ini harus berakhir di sini...<br>
-      Semoga kenangan tak ikut pergi.<br><br>
-      Rasa ini mungkin tak sempat tersampaikan secara nyata,<br>
-      Tapi pernah ada, dan tetap ada.
-    </p>
-  </div>
-</div>
+        <p>Kunjungi tautan berikut untuk belajar lebih lanjut: <a href="https://w3schools.com" target="_blank">Panduan HTML</a></p>
+    </main>
 
-<!-- Halaman 4 -->
-<div id="page4" class="section hidden">
-  <div class="card">
-    <div class="emoji">🕊️</div>
-    <h1>Penutup</h1>
-    <p>
-      Ini bukan tentang akhir...<br>
-      Tapi tentang menerima kenyataan bahwa tidak semua rasa harus memiliki wujud.
-    </p>
-  </div>
+    <footer>
+        <p>&copy; 2026 Website Sederhana</p>
+    </footer>
 
-  <!-- FOOTER -->
-  <div style="position: absolute; bottom: 0; width: 100%; background: white; color: black; text-align: center; padding: 20px 0;">
-    <div style="margin-bottom: 10px;">
-      <a href="https://www.instagram.com/shabriihsanatha" target="_blank" style="margin: 0 10px; text-decoration: none;">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="30" style="vertical-align: middle;">
-        <span style="font-size: 0.9rem; margin-left: 5px;">@shabriihsanatha</span>
-      </a>
-      <a href="https://www.instagram.com/helmipurnamayoga" target="_blank" style="margin: 0 10px; text-decoration: none;">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="30" style="vertical-align: middle;">
-        <span style="font-size: 0.9rem; margin-left: 5px;">@helmipurnamayoga</span>
-      </a>
-    </div>
-    <div style="font-size: 0.95rem; margin-bottom: 5px;">
-      Terimakasih atas kunjungan web ini
-    </div>
-    <div style="font-size: 0.85rem; font-weight: bold;">
-      WEB BY OWEL TEAM
-    </div>
-    <div style="font-size: 0.8rem; font-style: italic; margin-top: 5px;">
-      Sebuah karya sederhana dari hati yang rindu.
-    </div>
-  </div>
-</div>
-
-<script>
-  const rainContainer = document.getElementById('rain');
-  for (let i = 0; i < 100; i++) {
-    const drop = document.createElement('div');
-    drop.classList.add('raindrop');
-    drop.style.left = Math.random() * 100 + 'vw';
-    drop.style.animationDelay = Math.random() + 's';
-    drop.style.animationDuration = 0.4 + Math.random() + 's';
-    rainContainer.appendChild(drop);
-  }
-
-  function nextPage() {
-    document.getElementById("page1").classList.replace("visible", "hidden");
-    document.getElementById("page2").classList.replace("hidden", "visible");
-  }
-
-  function prevPage1() {
-    document.getElementById("page2").classList.replace("visible", "hidden");
-    document.getElementById("page1").classList.replace("hidden", "visible");
-  }
-
-  function nextPage2() {
-    document.getElementById("page2").classList.replace("visible", "hidden");
-    document.getElementById("page3").classList.replace("hidden", "visible");
-  }
-
-  function prevPage2() {
-    document.getElementById("page3").classList.replace("visible", "hidden");
-    document.getElementById("page2").classList.replace("hidden", "visible");
-  }
-
-  function nextPage3() {
-    document.getElementById("page3").classList.replace("visible", "hidden");
-    document.getElementById("page4").classList.replace("hidden", "visible");
-  }
-</script>
 </body>
 </html>
